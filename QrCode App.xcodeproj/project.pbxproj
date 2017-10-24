@@ -12,6 +12,7 @@
 		8F56BD9F1F9F2C44007AB7A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F56BD9D1F9F2C44007AB7A0 /* Main.storyboard */; };
 		8F56BDA11F9F2C44007AB7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F56BDA01F9F2C44007AB7A0 /* Assets.xcassets */; };
 		8F56BDA41F9F2C44007AB7A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F56BDA21F9F2C44007AB7A0 /* LaunchScreen.storyboard */; };
+		8F56BDAE1F9F316D007AB7A0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDAD1F9F316D007AB7A0 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8F56BDA01F9F2C44007AB7A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F56BDA31F9F2C44007AB7A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F56BDA51F9F2C44007AB7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F56BDAD1F9F316D007AB7A0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ViewControllers/WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,8 @@
 		8F56BD981F9F2C44007AB7A0 /* QrCode App */ = {
 			isa = PBXGroup;
 			children = (
+				8F56BDAC1F9F311E007AB7A0 /* Models */,
+				8F56BDAB1F9F30EB007AB7A0 /* ViewControllers */,
 				8F56BD991F9F2C44007AB7A0 /* AppDelegate.swift */,
 				8F56BD9B1F9F2C44007AB7A0 /* ViewController.swift */,
 				8F56BD9D1F9F2C44007AB7A0 /* Main.storyboard */,
@@ -62,6 +66,21 @@
 				8F56BDA51F9F2C44007AB7A0 /* Info.plist */,
 			);
 			path = "QrCode App";
+			sourceTree = "<group>";
+		};
+		8F56BDAB1F9F30EB007AB7A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F56BDAD1F9F316D007AB7A0 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8F56BDAC1F9F311E007AB7A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F56BDAE1F9F316D007AB7A0 /* WelcomeViewController.swift in Sources */,
 				8F56BD9C1F9F2C44007AB7A0 /* ViewController.swift in Sources */,
 				8F56BD9A1F9F2C44007AB7A0 /* AppDelegate.swift in Sources */,
 			);
