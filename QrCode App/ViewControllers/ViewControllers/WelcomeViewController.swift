@@ -26,7 +26,11 @@ class WelcomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func actionLogin(_ sender: UIButton) {
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
