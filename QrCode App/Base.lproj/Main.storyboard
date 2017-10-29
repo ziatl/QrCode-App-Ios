@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -272,19 +271,12 @@
                                                 <action selector="actionMenu:" destination="e7g-Ya-pGj" id="bkL-p8-bvT"/>
                                             </connections>
                                         </barButtonItem>
-                                        <rightBarButtonItems>
-                                            <barButtonItem systemItem="stop" id="pPu-Pb-bgt">
-                                                <color key="tintColor" red="0.062745098039215685" green="0.41960784313725491" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="sZj-Oz-3V2"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Item" image="web" id="sbf-N4-MAa">
-                                                <connections>
-                                                    <action selector="actionWeb:" destination="e7g-Ya-pGj" id="BaY-YC-INu"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="pPu-Pb-bgt">
+                                            <color key="tintColor" red="0.062745098039215685" green="0.41960784313725491" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="sZj-Oz-3V2"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -401,19 +393,12 @@
                                                 <action selector="actionMenu:" destination="ZKV-MK-AeC" id="1JS-EN-JQo"/>
                                             </connections>
                                         </barButtonItem>
-                                        <rightBarButtonItems>
-                                            <barButtonItem systemItem="stop" id="9vh-NX-loR">
-                                                <color key="tintColor" red="0.062745098039215685" green="0.41960784313725491" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="eW0-RY-UER"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Item" image="web" id="kGx-sx-O0C">
-                                                <connections>
-                                                    <action selector="actionWeb:" destination="ZKV-MK-AeC" id="37e-pA-Dvi"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="9vh-NX-loR">
+                                            <color key="tintColor" red="0.062745098039215685" green="0.41960784313725491" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="eW0-RY-UER"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -550,19 +535,12 @@
                                                 <action selector="actionMenu:" destination="ThO-Vh-xxN" id="CW2-Z0-ybp"/>
                                             </connections>
                                         </barButtonItem>
-                                        <rightBarButtonItems>
-                                            <barButtonItem systemItem="stop" id="vBH-HK-2Ua">
-                                                <color key="tintColor" red="0.062745098039215685" green="0.41960784313725491" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="X1r-hf-cRh"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Item" image="web" id="FVS-oz-4tK">
-                                                <connections>
-                                                    <action selector="actionWeb:" destination="ThO-Vh-xxN" id="yaR-Et-N8O"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="vBH-HK-2Ua">
+                                            <color key="tintColor" red="0.062745098039215685" green="0.41960784313725491" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="X1r-hf-cRh"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -610,12 +588,11 @@
         <image name="icon-qr" width="100" height="100"/>
         <image name="logo" width="938" height="531"/>
         <image name="replay" width="50" height="50"/>
-        <image name="web" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="IOi-cI-WaU"/>
         <segue reference="V7n-M4-w0g"/>
         <segue reference="oFZ-xR-rnN"/>
-        <segue reference="eW0-RY-UER"/>
+        <segue reference="X1r-hf-cRh"/>
     </inferredMetricsTieBreakers>
 </document>

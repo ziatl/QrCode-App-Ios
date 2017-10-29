@@ -38,17 +38,7 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
-    @IBAction func actionWeb(_ sender: UIBarButtonItem) {
-        guard let url = URL(string: "http://pridux.net") else {
-            return //be safe
-        }
-        
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            UIApplication.shared.openURL(url)
-        }
-    }
+    
 
 
 }
