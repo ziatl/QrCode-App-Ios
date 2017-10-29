@@ -16,6 +16,10 @@
 		8F56BDAE1F9F316D007AB7A0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDAD1F9F316D007AB7A0 /* WelcomeViewController.swift */; };
 		8F56BDB01F9FCD66007AB7A0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDAF1F9FCD66007AB7A0 /* UserModel.swift */; };
 		8F56BDC01F9FFF17007AB7A0 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDBF1F9FFF17007AB7A0 /* ScanViewController.swift */; };
+		8F56BDC21FA5D896007AB7A0 /* SpellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDC11FA5D896007AB7A0 /* SpellViewController.swift */; };
+		8F56BDC41FA5E059007AB7A0 /* ListCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDC31FA5E059007AB7A0 /* ListCodeViewController.swift */; };
+		8F56BDC71FA5E152007AB7A0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDC61FA5E152007AB7A0 /* ListTableViewCell.swift */; };
+		8F56BDC91FA60A11007AB7A0 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDC81FA60A11007AB7A0 /* LogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		8F56BDAD1F9F316D007AB7A0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ViewControllers/WelcomeViewController.swift; sourceTree = "<group>"; };
 		8F56BDAF1F9FCD66007AB7A0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8F56BDBF1F9FFF17007AB7A0 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		8F56BDC11FA5D896007AB7A0 /* SpellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellViewController.swift; sourceTree = "<group>"; };
+		8F56BDC31FA5E059007AB7A0 /* ListCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCodeViewController.swift; sourceTree = "<group>"; };
+		8F56BDC61FA5E152007AB7A0 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		8F56BDC81FA60A11007AB7A0 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		C928E2DB71481DA568E9866C /* Pods-QrCode App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QrCode App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QrCode App/Pods-QrCode App.debug.xcconfig"; sourceTree = "<group>"; };
 		E00EF73DB7D8A268BA7B8FBF /* Pods_QrCode_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QrCode_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,8 +107,12 @@
 		8F56BDAB1F9F30EB007AB7A0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8F56BDC51FA5E115007AB7A0 /* ViewCell */,
 				8F56BDAD1F9F316D007AB7A0 /* WelcomeViewController.swift */,
 				8F56BDBF1F9FFF17007AB7A0 /* ScanViewController.swift */,
+				8F56BDC11FA5D896007AB7A0 /* SpellViewController.swift */,
+				8F56BDC31FA5E059007AB7A0 /* ListCodeViewController.swift */,
+				8F56BDC81FA60A11007AB7A0 /* LogoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +123,14 @@
 				8F56BDAF1F9FCD66007AB7A0 /* UserModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8F56BDC51FA5E115007AB7A0 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8F56BDC61FA5E152007AB7A0 /* ListTableViewCell.swift */,
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F56BDAE1F9F316D007AB7A0 /* WelcomeViewController.swift in Sources */,
+				8F56BDC71FA5E152007AB7A0 /* ListTableViewCell.swift in Sources */,
 				8F56BD9C1F9F2C44007AB7A0 /* ViewController.swift in Sources */,
 				8F56BDC01F9FFF17007AB7A0 /* ScanViewController.swift in Sources */,
+				8F56BDC21FA5D896007AB7A0 /* SpellViewController.swift in Sources */,
+				8F56BDC91FA60A11007AB7A0 /* LogoViewController.swift in Sources */,
+				8F56BDC41FA5E059007AB7A0 /* ListCodeViewController.swift in Sources */,
 				8F56BDB01F9FCD66007AB7A0 /* UserModel.swift in Sources */,
 				8F56BD9A1F9F2C44007AB7A0 /* AppDelegate.swift in Sources */,
 			);
