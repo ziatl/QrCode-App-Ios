@@ -11,6 +11,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var viewLogin: UIView!
+    @IBOutlet weak var btnLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewLogin.layer.cornerRadius = self.viewLogin.frame.height/20.0;
@@ -19,6 +20,7 @@ class WelcomeViewController: UIViewController {
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+        btnLogin.layer.cornerRadius = btnLogin.frame.height / 2
     }
 
     override func didReceiveMemoryWarning() {
