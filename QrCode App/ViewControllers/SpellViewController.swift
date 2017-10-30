@@ -17,9 +17,10 @@ class SpellViewController: UIViewController {
     
     var lecteur = AVSpeechUtterance()
     var synth = AVSpeechSynthesizer()
+    var textGet:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
@@ -29,6 +30,7 @@ class SpellViewController: UIViewController {
         txvCode.layer.borderWidth = CGFloat(2.0)
         
         txvCode.layer.borderColor = UIColor.blue.cgColor
+        txvCode.text = textGet
         
         //
        self.lecteur = AVSpeechUtterance(string: txvCode.text)

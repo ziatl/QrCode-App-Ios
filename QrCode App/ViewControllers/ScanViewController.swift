@@ -72,8 +72,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         let avCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: avCaptureSession)
         avCaptureVideoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         avCaptureVideoPreviewLayer.frame = videoPreview.bounds
-        self.videoPreview.layer.addSublayer(avCaptureVideoPreviewLayer)
-        
+        self.view.layer.addSublayer(avCaptureVideoPreviewLayer)
+        //videoPreview.frame = view.layer.bounds
+        self.view.bringSubview(toFront: videoPreview)
         avCaptureSession.startRunning()
     }
     
@@ -81,6 +82,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         let alert = UIAlertController(title: "Code", message: "Le code Bar scanné : \(codeBar)", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default){(action:UIAlertAction!) in
             self.avCaptureSession.stopRunning()
+            let viewContr = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "save") as! SpellViewController
+            viewContr.textGet = self.codeBar
+            self.present(viewContr, animated: true, completion: nil)
 
         }
         let cancelAction = UIAlertAction(title: "Reprendre", style: .cancel){(action:UIAlertAction!) in
@@ -89,6 +93,15 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion:nil)
+    }
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if metadataObjects.count > 0 {
+            let machineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+            if machineReadableCode.type == AVMetadataObject.ObjectType.qr {
+                codeBar = machineReadableCode.stringValue!
+                showCode(codeBar)
+            }
+        }
     }
     
 

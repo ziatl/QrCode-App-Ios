@@ -11,11 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var btnList: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         btnList.layer.cornerRadius = btnList.frame.height / 2
+        
         
     }
 
