@@ -11,6 +11,7 @@ import AVFoundation
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet var videoPreview: UIView!
     @IBOutlet weak var btnAnnuler: UIButton!
+    @IBOutlet weak var imgQr: UIImageView!
     var codeBar = String()
     let avCaptureSession = AVCaptureSession()
     override func viewDidLoad() {
@@ -22,16 +23,13 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             print("Failed to scan the QR/Barcode.")
         }
         btnAnnuler.layer.cornerRadius = btnAnnuler.frame.height / 2
+        Provider()._setAudioSession(active: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
- 
     
     enum error: Error {
         case noCameraAvailable
@@ -73,7 +71,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         avCaptureVideoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         avCaptureVideoPreviewLayer.frame = videoPreview.bounds
         self.view.layer.addSublayer(avCaptureVideoPreviewLayer)
-        //videoPreview.frame = view.layer.bounds
+        videoPreview.frame = view.layer.bounds
+        videoPreview.bringSubview(toFront: btnAnnuler)
+        videoPreview.bringSubview(toFront: imgQr)
         self.view.bringSubview(toFront: videoPreview)
         avCaptureSession.startRunning()
     }
@@ -103,6 +103,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             }
         }
     }
+    
     
 
     /*

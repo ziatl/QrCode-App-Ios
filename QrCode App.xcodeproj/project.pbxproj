@@ -20,6 +20,7 @@
 		8F56BDC41FA5E059007AB7A0 /* ListCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDC31FA5E059007AB7A0 /* ListCodeViewController.swift */; };
 		8F56BDC71FA5E152007AB7A0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDC61FA5E152007AB7A0 /* ListTableViewCell.swift */; };
 		8F56BDC91FA60A11007AB7A0 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BDC81FA60A11007AB7A0 /* LogoViewController.swift */; };
+		8F5E258B1FB5CDFF000ACDC1 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E258A1FB5CDFF000ACDC1 /* Provider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8F56BDC31FA5E059007AB7A0 /* ListCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCodeViewController.swift; sourceTree = "<group>"; };
 		8F56BDC61FA5E152007AB7A0 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		8F56BDC81FA60A11007AB7A0 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
+		8F5E258A1FB5CDFF000ACDC1 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		C928E2DB71481DA568E9866C /* Pods-QrCode App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QrCode App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QrCode App/Pods-QrCode App.debug.xcconfig"; sourceTree = "<group>"; };
 		E00EF73DB7D8A268BA7B8FBF /* Pods_QrCode_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QrCode_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				8F56BDA01F9F2C44007AB7A0 /* Assets.xcassets */,
 				8F56BDA21F9F2C44007AB7A0 /* LaunchScreen.storyboard */,
 				8F56BDA51F9F2C44007AB7A0 /* Info.plist */,
+				8F5E258A1FB5CDFF000ACDC1 /* Provider.swift */,
 			);
 			path = "QrCode App";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				8F56BDC91FA60A11007AB7A0 /* LogoViewController.swift in Sources */,
 				8F56BDC41FA5E059007AB7A0 /* ListCodeViewController.swift in Sources */,
 				8F56BDB01F9FCD66007AB7A0 /* UserModel.swift in Sources */,
+				8F5E258B1FB5CDFF000ACDC1 /* Provider.swift in Sources */,
 				8F56BD9A1F9F2C44007AB7A0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

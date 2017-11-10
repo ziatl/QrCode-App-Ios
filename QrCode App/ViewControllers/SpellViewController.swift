@@ -52,7 +52,7 @@ class SpellViewController: UIViewController {
             synth.stopSpeaking(at: .immediate)
         }
         lecteur = AVSpeechUtterance(string: txvCode.text)
-        lecteur.voice = AVSpeechSynthesisVoice(language: "en-EN")
+        lecteur.voice = AVSpeechSynthesisVoice(language: "fr-FR")
         lecteur.rate = 0.4
         synth.speak(lecteur)
     }
