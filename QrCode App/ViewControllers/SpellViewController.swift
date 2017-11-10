@@ -97,5 +97,16 @@ class SpellViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func actionDisconnet(_ sender: Any) {
+        let alert = UIAlertController(title: "Information", message: "Voullez vous vous deconnecter ?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
+            let viewCOntroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
+            self.present(viewCOntroller, animated: true, completion: nil)
+        })
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

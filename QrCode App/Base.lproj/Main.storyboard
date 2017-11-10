@@ -9,6 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
+            <string>Menlo-Regular</string>
+        </array>
         <array key="TimesNewRoman.ttf">
             <string>TimesNewRomanPSMT</string>
         </array>
@@ -29,8 +33,8 @@
                                     <constraint firstAttribute="height" constant="204" id="bvW-NR-rxs"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Voix Rx 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-BN-IGW">
-                                <rect key="frame" x="94" y="606" width="187" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© VoixRx 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-BN-IGW">
+                                <rect key="frame" x="94" y="608" width="187" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="td5-6k-ebL"/>
                                 </constraints>
@@ -42,7 +46,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Unn-D7-kdz" firstAttribute="centerX" secondItem="F5q-s9-gda" secondAttribute="centerX" id="2Rt-2P-VV9"/>
-                            <constraint firstItem="OrZ-rN-QT9" firstAttribute="bottom" secondItem="4cT-BN-IGW" secondAttribute="bottom" constant="42" id="MXL-Zm-Phx"/>
+                            <constraint firstItem="OrZ-rN-QT9" firstAttribute="bottom" secondItem="4cT-BN-IGW" secondAttribute="bottom" constant="40" id="MXL-Zm-Phx"/>
                             <constraint firstItem="Unn-D7-kdz" firstAttribute="centerY" secondItem="F5q-s9-gda" secondAttribute="centerY" id="OuR-uL-fw3"/>
                             <constraint firstItem="4cT-BN-IGW" firstAttribute="centerX" secondItem="F5q-s9-gda" secondAttribute="centerX" id="kMc-uQ-LYb"/>
                         </constraints>
@@ -51,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0b-DN-jLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-890" y="81"/>
+            <point key="canvasLocation" x="-35" y="19"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -61,12 +65,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-qC-mMk">
-                                <rect key="frame" x="0.0" y="39" width="375" height="628"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-qC-mMk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rrm-GI-rFD">
-                                <rect key="frame" x="0.0" y="39" width="375" height="628"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLW-an-cBI">
                                         <rect key="frame" x="33" y="152.5" width="308" height="323"/>
@@ -109,6 +113,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="wxr-X4-u3S"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                 <state key="normal" title="Connexion">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -121,6 +126,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="YiW-7A-0io"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                 <state key="normal" title="Créer un compte">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -129,7 +135,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.51599957190000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.41872392419762167" green="0.42607563462527237" blue="0.4603322975548223" alpha="0.51599957190000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="gei-pO-v0x" firstAttribute="centerX" secondItem="cLW-an-cBI" secondAttribute="centerX" id="0Wj-Pt-OGN"/>
                                             <constraint firstItem="5DV-de-w4B" firstAttribute="centerX" secondItem="cLW-an-cBI" secondAttribute="centerX" id="48u-KG-2Vc"/>
@@ -144,25 +150,25 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btY-os-Ptu">
-                                        <rect key="frame" x="119.5" y="77.5" width="136.5" height="34.5"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="31"/>
+                                        <rect key="frame" x="104" y="75.5" width="168" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Voix Rx 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKk-Lw-egu">
-                                        <rect key="frame" x="94" y="601" width="187" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© VoixRx 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKk-Lw-egu">
+                                        <rect key="frame" x="94" y="610" width="187" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="d4m-Hm-4oF"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.16858411815068494" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="XKk-Lw-egu" secondAttribute="bottom" constant="8" id="36e-2L-fso"/>
-                                    <constraint firstItem="cLW-an-cBI" firstAttribute="centerY" secondItem="Rrm-GI-rFD" secondAttribute="centerY" id="61q-Ue-UpK"/>
+                                    <constraint firstAttribute="bottom" secondItem="XKk-Lw-egu" secondAttribute="bottom" constant="40" id="36e-2L-fso"/>
+                                    <constraint firstItem="cLW-an-cBI" firstAttribute="centerY" secondItem="Rrm-GI-rFD" secondAttribute="centerY" constant="-19.5" id="61q-Ue-UpK"/>
                                     <constraint firstItem="cLW-an-cBI" firstAttribute="top" secondItem="btY-os-Ptu" secondAttribute="bottom" constant="40.5" id="E7B-dA-Hgg"/>
                                     <constraint firstItem="XKk-Lw-egu" firstAttribute="centerX" secondItem="Rrm-GI-rFD" secondAttribute="centerX" id="Pso-nG-f6G"/>
                                     <constraint firstItem="cLW-an-cBI" firstAttribute="centerX" secondItem="Rrm-GI-rFD" secondAttribute="centerX" id="Vle-sM-35n"/>
@@ -172,14 +178,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iPd-qC-mMk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2Kt-E3-fVu"/>
+                            <constraint firstItem="iPd-qC-mMk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1rA-DT-kI3"/>
                             <constraint firstItem="Rrm-GI-rFD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6lJ-nw-SfV"/>
-                            <constraint firstItem="iPd-qC-mMk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Klf-HY-pF1"/>
-                            <constraint firstItem="iPd-qC-mMk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lae-WG-G7r"/>
-                            <constraint firstItem="Rrm-GI-rFD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="39" id="Pnv-fk-7Yn"/>
+                            <constraint firstItem="iPd-qC-mMk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FAK-zH-7ga"/>
+                            <constraint firstItem="Rrm-GI-rFD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pnv-fk-7Yn"/>
                             <constraint firstItem="Rrm-GI-rFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VpD-Ox-sul"/>
+                            <constraint firstItem="iPd-qC-mMk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WUR-cP-eMJ"/>
                             <constraint firstItem="Rrm-GI-rFD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oqL-Ux-Mh9"/>
-                            <constraint firstItem="iPd-qC-mMk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="39" id="zhP-6n-MtU"/>
+                            <constraint firstItem="iPd-qC-mMk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q1Q-IN-iey"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -195,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="18.440779610194905"/>
+            <point key="canvasLocation" x="581.60000000000002" y="17.733990147783253"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="UPl-UX-THp">
@@ -222,6 +228,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="126" id="DEC-Qt-6ei"/>
                                             <constraint firstAttribute="height" constant="30" id="tGD-JW-k1S"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                         <state key="normal" title="Annuler">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -265,35 +272,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-Rq-ZBU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Enregistrement" id="bgm-jJ-1Bd">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon-menu" id="UgB-2o-7Vs">
-                                            <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="actionMenu:" destination="e7g-Ya-pGj" id="bkL-p8-bvT"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="pPu-Pb-bgt">
-                                            <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="sZj-Oz-3V2"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfm-PY-olT">
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KeD-8u-IJO"/>
                                 </constraints>
-                                <state key="normal" title="Liste des code-barres">
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Liste des codes qr">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -301,26 +287,27 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langue : EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkj-0F-LAR">
-                                <rect key="frame" x="136" y="86" width="103" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <rect key="frame" x="138.5" y="86" width="99.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text=" Toto is a medicine against stress Instructions.  Do not consume when it snows .Take care of the dose" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dX6-WJ-xKQ">
-                                <rect key="frame" x="16" y="196" width="343" height="202"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text=" Toto is a medicine against stress Instructions.  Do not consume when it snows .Take care of the dose" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX6-WJ-xKQ">
+                                <rect key="frame" x="16" y="190.5" width="343" height="202"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="cFH-KQ-OhU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-wh-jNw">
-                                <rect key="frame" x="100" y="447" width="175" height="30"/>
+                                <rect key="frame" x="100" y="441.5" width="175" height="30"/>
                                 <color key="backgroundColor" red="0.32941176470588235" green="0.062745098039215685" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="DtU-T8-equ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -329,7 +316,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od8-a9-NPA">
-                                <rect key="frame" x="163.5" y="485" width="48" height="30"/>
+                                <rect key="frame" x="156.5" y="479.5" width="62" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -338,7 +326,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohw-LV-ANV">
-                                <rect key="frame" x="162.5" y="119" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="113.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IIW-Ks-V59"/>
                                     <constraint firstAttribute="height" constant="50" id="Xr6-hg-oTa"/>
@@ -348,6 +336,28 @@
                                     <action selector="actionSave:" destination="e7g-Ya-pGj" eventType="touchUpInside" id="5hy-gq-KBK"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-Rq-ZBU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Enregistrement" id="bgm-jJ-1Bd">
+                                        <barButtonItem key="leftBarButtonItem" image="icon-menu" id="UgB-2o-7Vs">
+                                            <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionMenu:" destination="e7g-Ya-pGj" id="bkL-p8-bvT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="pPu-Pb-bgt">
+                                            <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionDisconnet:" destination="e7g-Ya-pGj" id="CYh-ye-lbQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -397,7 +407,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Liste code-barres" id="eLi-My-0bu">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon-menu" id="xgN-6Q-sCY">
+                                        <barButtonItem key="leftBarButtonItem" image="icon-menu" id="xgN-6Q-sCY">
                                             <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="actionMenu:" destination="ZKV-MK-AeC" id="1JS-EN-JQo"/>
@@ -406,14 +416,14 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="9vh-NX-loR">
                                             <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="eW0-RY-UER"/>
+                                                <action selector="actionDisconnet:" destination="ZKV-MK-AeC" id="9bJ-N2-prb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DNy-sc-fge">
-                                <rect key="frame" x="16" y="120" width="343" height="527"/>
+                                <rect key="frame" x="16" y="114.5" width="343" height="532.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="71" id="T3o-mR-tde" customClass="ListTableViewCell" customModule="QrCode_App" customModuleProvider="target">
@@ -429,17 +439,18 @@
                                                         <constraint firstAttribute="height" constant="46" id="Aeb-4U-Z8K"/>
                                                         <constraint firstAttribute="width" constant="46" id="mDg-P5-n9H"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="audio"/>
                                                     <connections>
                                                         <action selector="actionSpell:" destination="T3o-mR-tde" eventType="touchUpInside" id="7uK-76-J4m"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO0-GH-dId">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO0-GH-dId">
                                                     <rect key="frame" x="8" y="0.0" width="281" height="63"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="OBW-rT-pol"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -465,8 +476,8 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langue : EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z98-6m-5s0">
-                                <rect key="frame" x="136" y="76" width="103" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <rect key="frame" x="138.5" y="76" width="99.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -539,7 +550,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Bienvenue" id="ayH-jL-i56">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon-menu" id="tjh-dD-bVK">
+                                        <barButtonItem key="leftBarButtonItem" image="icon-menu" id="tjh-dD-bVK">
                                             <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="actionMenu:" destination="ThO-Vh-xxN" id="CW2-Z0-ybp"/>
@@ -548,7 +559,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="vBH-HK-2Ua">
                                             <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="X1r-hf-cRh"/>
+                                                <action selector="actionDisconnet:" destination="ThO-Vh-xxN" id="LI5-1G-jUG"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -560,7 +571,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Hex-cz-T2I"/>
                                 </constraints>
-                                <state key="normal" title="Liste des code-barres">
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Liste des codes qr">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -593,15 +605,14 @@
     <resources>
         <image name="FrontQrCode" width="640" height="640"/>
         <image name="audio" width="50" height="50"/>
-        <image name="bg" width="471" height="719"/>
+        <image name="bkg" width="750" height="1334"/>
         <image name="icon-menu" width="50" height="50"/>
         <image name="icon-qr" width="100" height="100"/>
         <image name="logo" width="938" height="531"/>
         <image name="replay" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7C7-o6-CXR"/>
+        <segue reference="htM-l5-onA"/>
         <segue reference="4mi-SE-McM"/>
-        <segue reference="sZj-Oz-3V2"/>
     </inferredMetricsTieBreakers>
 </document>
