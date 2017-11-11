@@ -18,6 +18,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var txfLogin: UITextField!
     @IBOutlet weak var txfPassword: UITextField!
     @IBOutlet weak var txfPasswordRepeat: UITextField!
+    let save = UserDefaults.standard
     var action = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class WelcomeViewController: UIViewController {
         btnCreate.layer.borderWidth = 1.0
         btnCreate.layer.cornerRadius = btnCreate.frame.height / 2
         txfPasswordRepeat.isHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,25 +82,36 @@ class WelcomeViewController: UIViewController {
     
     func login(username:String,password:String) {
         let parameter:Parameters = ["username":username,"password":password]
-        Alamofire.request("http://pridux.net/mobile/login.inc.php", method: .post,parameters:parameter).validate(){request, response, data in
+        Alamofire.request("http://pridux.net/mobile/login.inc.php", method: .post,parameters:parameter).validate(){request,response,data  in
             return .success
             }.responseJSON() { response in
-                let rep = response.result.value as? Bool
-                debugPrint(" connexion \(rep!) ")
-                if rep! {
-                    let alert = UIAlertController(title: "Inscription", message: "Connexion effectuée avec succes !!", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "Ok", style: .destructive, handler:{(void) in
-                        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "menu")
-                        self.present(viewController, animated: true, completion: nil)
-                    })
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
-                }else{
-                    let alert = UIAlertController(title: "Erreur login", message: "Email ou mot de passe incorrect", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
+                //Recuperation de la reponse
+                if let rep = response.result.value as? [String:Any] {
+                    //Recuperation des donnees de l utilisateur
+                    if let data = rep["data"] as? [String:Any] {
+                        let isConnect = data["isConnected"] as? Int
+                        if isConnect == 1 {
+                            let id = data["id"] as? Int
+                            //Ajout de l id user en memoire
+                            self.save.set(id, forKey: "id")
+                            let alert = UIAlertController(title: "Inscription", message: "Connexion effectuée avec succes !!", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "Ok", style: .destructive, handler:{(void) in
+                                let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "menu")
+                                self.present(viewController, animated: true, completion: nil)
+                            })
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true, completion: nil)
+                        } else{
+                            let alert = UIAlertController(title: "Erreur login", message: "Email ou mot de passe incorrect", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                    
+                    //fin rep
                 }
+                
         }
         
     }

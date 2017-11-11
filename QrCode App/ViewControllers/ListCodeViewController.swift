@@ -14,6 +14,8 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     var lecteur = AVSpeechUtterance()
     var synth = AVSpeechSynthesizer()
+    let save = UserDefaults.standard
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -73,7 +75,6 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
-
     
     
     @IBAction func actionDisconnet(_ sender: Any) {
@@ -81,6 +82,7 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
             let viewCOntroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
             self.present(viewCOntroller, animated: true, completion: nil)
+            UserDefaults.standard.removeObject(forKey: "id")
         })
         let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)

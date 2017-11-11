@@ -9,18 +9,25 @@
 import UIKit
 
 class LogoViewController: UIViewController {
-
+    let save = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            let viewControl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome") as! WelcomeViewController
-            self.present(viewControl, animated: true, completion: nil)
+            if (self.save.value(forKey: "id") != nil) {
+                print("kjf")
+                let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "menu") as! ViewController
+                self.present(viewController, animated: true, completion: nil)
+            }else{
+                let viewControl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome") as! WelcomeViewController
+                self.present(viewControl, animated: true, completion: nil)
+            }
+            
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        
     }
 
     override func didReceiveMemoryWarning() {

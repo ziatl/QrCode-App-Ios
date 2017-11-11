@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var btnList: UIButton!
-
-    
+    let save = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,10 +41,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actionDisconnet(_ sender: Any) {
-        let alert = UIAlertController(title: "Information", message: "Voullez vous vous deconnecter ?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Information", message: "Voulez vous vous deconnecter ?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
             let viewCOntroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
             self.present(viewCOntroller, animated: true, completion: nil)
+            UserDefaults.standard.removeObject(forKey: "id")
         })
         let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)

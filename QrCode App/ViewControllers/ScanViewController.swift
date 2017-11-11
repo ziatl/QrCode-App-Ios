@@ -47,8 +47,6 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     func scanQRCode() throws {
-        
-        
         guard let avCaptureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
             print("No camera.")
             throw error.noCameraAvailable
@@ -94,6 +92,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion:nil)
     }
+
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects.count > 0 {
             let machineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject

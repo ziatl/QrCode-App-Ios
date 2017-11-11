@@ -18,6 +18,7 @@ class SpellViewController: UIViewController {
     var lecteur = AVSpeechUtterance()
     var synth = AVSpeechSynthesizer()
     var textGet:String = ""
+    let save = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,17 +77,6 @@ class SpellViewController: UIViewController {
         synth.stopSpeaking(at: .immediate)
     }
     
-    @IBAction func actionWeb(_ sender: UIBarButtonItem) {
-        guard let url = URL(string: "http://pridux.net") else {
-            return //be safe
-        }
-        
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            UIApplication.shared.openURL(url)
-        }
-    }
     
     /*
     // MARK: - Navigation
@@ -102,6 +92,7 @@ class SpellViewController: UIViewController {
         let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
             let viewCOntroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
             self.present(viewCOntroller, animated: true, completion: nil)
+            UserDefaults.standard.removeObject(forKey: "id")
         })
         let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)
