@@ -287,7 +287,7 @@
                                     <segue destination="ZKV-MK-AeC" kind="show" id="htM-l5-onA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langue : EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkj-0F-LAR">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langue : EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkj-0F-LAR">
                                 <rect key="frame" x="138.5" y="86" width="99.5" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -313,7 +313,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZKV-MK-AeC" kind="show" id="7C7-o6-CXR"/>
+                                    <action selector="actionSave:" destination="e7g-Ya-pGj" eventType="touchUpInside" id="FVC-Rb-Q4c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od8-a9-NPA">
@@ -334,7 +334,7 @@
                                 </constraints>
                                 <state key="normal" image="replay"/>
                                 <connections>
-                                    <action selector="actionSave:" destination="e7g-Ya-pGj" eventType="touchUpInside" id="5hy-gq-KBK"/>
+                                    <action selector="actionReplay:" destination="e7g-Ya-pGj" eventType="touchUpInside" id="V8Y-0x-e3T"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-Rq-ZBU">
@@ -423,7 +423,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langue : EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z98-6m-5s0">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langue : EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z98-6m-5s0">
                                 <rect key="frame" x="138.5" y="76" width="99.5" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -613,7 +613,7 @@
         <image name="replay" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oFZ-xR-rnN"/>
-        <segue reference="IOi-cI-WaU"/>
+        <segue reference="htM-l5-onA"/>
+        <segue reference="4mi-SE-McM"/>
     </inferredMetricsTieBreakers>
 </document>

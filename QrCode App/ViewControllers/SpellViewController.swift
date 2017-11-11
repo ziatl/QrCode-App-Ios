@@ -44,8 +44,23 @@ class SpellViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
     @IBAction func actionSave(_ sender: UIButton) {
+        if synth.isSpeaking {
+            synth.stopSpeaking(at: .immediate)
+        }
+        let alert = UIAlertController(title: "Confirmation", message: "Enregistrer ce code qr ?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "liste") as! ListCodeViewController
+            self.present(viewController, animated: true, completion: nil)
+        })
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func actionReplay(_ sender: UIButton) {
        spell()
     }
     func spell() {
