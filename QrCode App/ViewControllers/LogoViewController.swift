@@ -13,16 +13,15 @@ class LogoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             if (self.save.value(forKey: "id") != nil) {
-                print("kjf")
+                
                 let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "menu") as! ViewController
                 self.present(viewController, animated: true, completion: nil)
             }else{
                 let viewControl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome") as! WelcomeViewController
                 self.present(viewControl, animated: true, completion: nil)
             }
-            
         }
     }
     

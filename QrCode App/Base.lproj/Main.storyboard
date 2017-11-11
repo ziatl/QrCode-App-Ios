@@ -217,6 +217,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FrontQrCode" translatesAutoresizingMaskIntoConstraints="NO" id="ell-84-2Zt">
                                         <rect key="frame" x="43" y="135" width="288" height="288"/>
+                                        <color key="tintColor" red="0.3294117647" green="0.062745098040000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="288" id="YRG-ot-nqr"/>
                                             <constraint firstAttribute="width" constant="288" id="yZk-2E-0d5"/>
@@ -263,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtd-bx-Ven" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629.5999999999999" y="716.49175412293857"/>
+            <point key="canvasLocation" x="1630" y="717"/>
         </scene>
         <!--Spell View Controller-->
         <scene sceneID="X7W-MT-Mg8">
@@ -293,9 +294,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text=" Toto is a medicine against stress Instructions.  Do not consume when it snows .Take care of the dose" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX6-WJ-xKQ">
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" text=" Toto is a medicine against stress Instructions.  Do not consume when it snows .Take care of the dose" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX6-WJ-xKQ">
                                 <rect key="frame" x="16" y="190.5" width="343" height="202"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="cFH-KQ-OhU"/>
                                 </constraints>
@@ -613,7 +614,8 @@
         <image name="replay" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="htM-l5-onA"/>
-        <segue reference="4mi-SE-McM"/>
+        <segue reference="jId-dx-JUe"/>
+        <segue reference="oFZ-xR-rnN"/>
+        <segue reference="IOi-cI-WaU"/>
     </inferredMetricsTieBreakers>
 </document>
