@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     @IBAction func actionMenu(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Menu", message: "", preferredStyle: .actionSheet)
-        let listAction = UIAlertAction(title: "List des code-barres ", style: .default, handler: {(action) -> Void in
+        let listAction = UIAlertAction(title: "Liste des codes qr ", style: .default, handler: {(action) -> Void in
             let viewControl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "liste") as! ListCodeViewController
             self.present(viewControl, animated: true, completion: nil)
         })

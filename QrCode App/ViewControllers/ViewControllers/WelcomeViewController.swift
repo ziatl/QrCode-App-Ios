@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 
 class WelcomeViewController: UIViewController {
-
     @IBOutlet weak var viewLogin: UIView!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnCreate: UIButton!
@@ -34,6 +33,9 @@ class WelcomeViewController: UIViewController {
         btnCreate.layer.borderWidth = 1.0
         btnCreate.layer.cornerRadius = btnCreate.frame.height / 2
         txfPasswordRepeat.isHidden = true
+        if let id = save.value(forKey: "id") {
+            print(id)
+        }
         
     }
 
@@ -91,11 +93,13 @@ class WelcomeViewController: UIViewController {
                     if let data = rep["data"] as? [String:Any] {
                         let isConnect = data["isConnected"] as? Int
                         if isConnect == 1 {
-                            let id = data["id"] as? Int
+                            print(data)
+                            let id = data["id"]
+
                             //Ajout de l id user en memoire
-                            self.save.set(id, forKey: "id")
+                            self.save.set(id!, forKey: "id")
                             let alert = UIAlertController(title: "Inscription", message: "Connexion effectuée avec succes !!", preferredStyle: .alert)
-                            let okAction = UIAlertAction(title: "Ok", style: .destructive, handler:{(void) in
+                            let okAction = UIAlertAction(title: "Ok", style: .default, handler:{(void) in
                                 let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "menu")
                                 self.present(viewController, animated: true, completion: nil)
                             })
@@ -103,7 +107,7 @@ class WelcomeViewController: UIViewController {
                             self.present(alert, animated: true, completion: nil)
                         } else{
                             let alert = UIAlertController(title: "Erreur login", message: "Email ou mot de passe incorrect", preferredStyle: .alert)
-                            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                            let okAction = UIAlertAction(title: "Ok", style: .destructive, handler: nil)
                             alert.addAction(okAction)
                             self.present(alert, animated: true, completion: nil)
                         }
@@ -125,7 +129,7 @@ class WelcomeViewController: UIViewController {
                 debugPrint(" Inscription \(rep!) ")
                 if rep! {
                     let alert = UIAlertController(title: "Felicitation", message: "Bienvenue sur VoixRX. Veuillez vous connecter à votre espace", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "Ok", style: .destructive, handler: nil)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                     alert.addAction(okAction)
                     self.btnLogin.setTitle(self.inscBtnLogText, for: .normal)
                     self.btnCreate.setTitle(self.inscLblCreateText, for: .normal)

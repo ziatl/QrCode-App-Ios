@@ -8,9 +8,10 @@
 
 import UIKit
 import AVFoundation
+import Alamofire
 class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tbvlistCode: UITableView!
-    var table = ["You have some problems. Please stay at home.","You can not go now."," Toto is a medicine against stress Instructions.  Do not consume when it snows .Take care of the dose"]
+    var table = [String]()
     
     var lecteur = AVSpeechUtterance()
     var synth = AVSpeechSynthesizer()
@@ -19,6 +20,7 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        getList((Int)(save.value(forKey: "id") as! String)!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +37,9 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tbvlistCode.dequeueReusableCell(withIdentifier: "cell") as! ListTableViewCell
-        cell.lblCode.text = table[indexPath.row]
+        let texte = table[indexPath.row].couper(longFin: 2)
+        
+        cell.lblCode.text = texte
         cell.btnSpell.tag = indexPath.row
         cell.btnSpell.addTarget(self, action: #selector(actionSpell), for: .touchUpInside)
         return cell
@@ -48,8 +52,9 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
         if synth.isSpeaking {
             synth.stopSpeaking(at: .immediate)
         }
-        lecteur = AVSpeechUtterance(string: table[sender.tag])
-        lecteur.voice = AVSpeechSynthesisVoice(language: "en-EN")
+        let texte = table[sender.tag].couper(longFin: 2)
+        lecteur = AVSpeechUtterance(string: texte)
+        lecteur.voice = AVSpeechSynthesisVoice(language: "fr-FR")
         lecteur.rate = 0.4
         
         synth.speak(lecteur)
@@ -78,7 +83,7 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     @IBAction func actionDisconnet(_ sender: Any) {
-        let alert = UIAlertController(title: "Information", message: "Voullez vous vous deconnecter ?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Information", message: "Voulez vous vous deconnecter ?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
             let viewCOntroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
             self.present(viewCOntroller, animated: true, completion: nil)
@@ -89,6 +94,31 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func getList(_ id:Int){
+        let parameter:Parameters = ["id":id]
+        Alamofire.request("http://pridux.net/mobile/list_scan.php", method: .post,parameters:parameter).validate(){request, response, data in
+            return .success
+            }.responseJSON() { response in
+                if let rep = response.result.value as? [String:Any] {
+                    debugPrint(" Inscription \(rep) ")
+                    if let codes = rep["data"] as? [[String:Any]] {
+                        for code in codes {
+                            for (key,value) in code {
+                                if key == "instruction" {
+                                    self.table.append(value as! String)
+                                }
+                            }
+                            self.tbvlistCode.reloadData()
+                        }
+                    }
+                }
+                
+                
+        }
+        
+    }
+    
     
 
     /*

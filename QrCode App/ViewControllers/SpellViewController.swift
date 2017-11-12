@@ -32,7 +32,7 @@ class SpellViewController: UIViewController {
         txvCode.layer.borderWidth = CGFloat(2.0)
         
         //txvCode.layer.borderColor = UIColor.blue.cgColor
-        txvCode.text = textGet
+        txvCode.text = textGet.couper(longFin: 2)
         //
        self.lecteur = AVSpeechUtterance(string: txvCode.text)
         spell()
@@ -49,11 +49,9 @@ class SpellViewController: UIViewController {
         }
         let alert = UIAlertController(title: "Confirmation", message: "Enregistrer ce code qr ?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
-            //let id = UserDefaults.standard.value(forKey: "id") as! Int
+            let id = (Int)(UserDefaults.standard.value(forKey: "id") as! String)!
             //enregistrement du code
-            //self.save(id: id, texte: self.txvCode.text)
-            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "liste") as! ListCodeViewController
-            self.present(viewController, animated: true, completion: nil)
+            self.save(id: id, texte: self.textGet)
         })
         let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)
@@ -62,12 +60,12 @@ class SpellViewController: UIViewController {
     }
     
     func save (id:Int,texte:String){
-        let parameter:Parameters = ["id":id,"texte":texte]
-        Alamofire.request("http://pridux.net/mobile/registration.php", method: .post,parameters:parameter).validate(){request, response, data in
+        let parameter:Parameters = ["id_user":id,"instruction":texte]
+        Alamofire.request("http://pridux.net/mobile/save_scan.php", method: .post,parameters:parameter).validate(){request, response, data in
             return .success
             }.responseJSON() { response in
                 let rep = response.result.value as? Bool
-                debugPrint(" Inscription \(rep!) ")
+                debugPrint(" Resultat \(rep!) ")
                 if rep! {
                     let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "liste") as! ListCodeViewController
                     self.present(viewController, animated: true, completion: nil)
@@ -123,7 +121,7 @@ class SpellViewController: UIViewController {
     }
     */
     @IBAction func actionDisconnet(_ sender: Any) {
-        let alert = UIAlertController(title: "Information", message: "Voullez vous vous deconnecter ?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Information", message: "Voulez vous vous deconnecter ?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "ok", style: .default, handler: {(void) in
             let viewCOntroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
             self.present(viewCOntroller, animated: true, completion: nil)

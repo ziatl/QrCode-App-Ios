@@ -33,4 +33,21 @@ class Provider {
             port.portType == AVAudioSessionPortHeadphones
         })
     }
+    
 }
+extension String {
+    mutating func couper(longDeb:Int) -> String {
+        let lengh = self.sorted().count - longDeb
+        let start = self.index(self.startIndex, offsetBy: 0)
+        let end = self.index(self.endIndex, offsetBy: -lengh)
+        let range = start..<end
+        return String(self[range])
+    }
+    mutating func couper(longFin:Int) -> String {
+        let start = self.index(self.startIndex, offsetBy: longFin)
+        let end = self.index(self.endIndex, offsetBy: -0)
+        let range = start..<end
+        return String(self[range])
+    }
+}
+
