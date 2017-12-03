@@ -17,10 +17,12 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var synth = AVSpeechSynthesizer()
     let save = UserDefaults.standard
 
+    @IBOutlet weak var lblLangue: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getList((Int)(save.value(forKey: "id") as! String)!)
+        Provider()._setAudioSession(active: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,9 +56,10 @@ class ListCodeViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
         let texte = table[sender.tag].couper(longFin: 2)
         lecteur = AVSpeechUtterance(string: texte)
-        lecteur.voice = AVSpeechSynthesisVoice(language: "fr-FR")
+        lecteur.voice = AVSpeechSynthesisVoice(language: Provider.getLangue(lg: table[sender.tag].couper(longDeb: 2)))
         lecteur.rate = 0.4
-        
+        lblLangue.isHidden = false
+        lblLangue.text = "Langue "+Provider.getLangue(lg: table[sender.tag].couper(longDeb: 2))
         synth.speak(lecteur)
     }
     

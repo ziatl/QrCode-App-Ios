@@ -12,8 +12,6 @@ class Provider {
     func _setAudioSession(active: Bool) {
         if !isHeadphonesConnected() {
             do {
-                
-                
                 let audioSession = AVAudioSession.sharedInstance()
                 
                 let avopts:AVAudioSessionCategoryOptions = [
@@ -25,7 +23,6 @@ class Provider {
                 print("IGNORE!! - error while setting audioSession status")
             }
         }
-        
     }
     func isHeadphonesConnected() -> Bool{
         let routes = AVAudioSession.sharedInstance().currentRoute
@@ -34,7 +31,22 @@ class Provider {
         })
     }
     
+    //Get Language
+    static let dicLangue = ["fr":"fr-FR",
+    "en":"en-US",
+    "es":"es-ES",
+    "it":"it-IT"]
+    
+    static func getLangue(lg:String) -> String {
+        if (dicLangue[lg.lowercased()] != nil) {
+            return dicLangue[lg.lowercased()]!
+        }else{
+            return dicLangue["fr"]!
+        }
+    }
+    
 }
+
 extension String {
     mutating func couper(longDeb:Int) -> String {
         let lengh = self.sorted().count - longDeb
@@ -49,5 +61,7 @@ extension String {
         let range = start..<end
         return String(self[range])
     }
+    
+    
 }
 

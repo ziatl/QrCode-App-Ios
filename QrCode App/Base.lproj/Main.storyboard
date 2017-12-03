@@ -500,6 +500,7 @@
                         <viewLayoutGuide key="safeArea" id="EXy-uk-h2m"/>
                     </view>
                     <connections>
+                        <outlet property="lblLangue" destination="z98-6m-5s0" id="7n6-pc-neE"/>
                         <outlet property="tbvlistCode" destination="DNy-sc-fge" id="Q3E-Ju-6u0"/>
                     </connections>
                 </viewController>

@@ -23,6 +23,7 @@ class LogoViewController: UIViewController {
                 self.present(viewControl, animated: true, completion: nil)
             }
         }
+        Provider()._setAudioSession(active: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
